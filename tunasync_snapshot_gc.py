@@ -9,7 +9,7 @@ import toml
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="tunasync_snapshot_gc")
     parser.add_argument("--max-level", type=int, default=1, help="max walk level to find garbage snapshots")
-    parser.add_argument("--pattern", default=r"^_gc_\d+", help="pattern to match garbage snapshots")
+    parser.add_argument("--pattern", default=r"^_gc_.+_\d+", help="pattern to match garbage snapshots")
     parser.add_argument("-c", "--config", help="tunasync config file")
 
     args = parser.parse_args()
