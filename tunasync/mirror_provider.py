@@ -58,7 +58,7 @@ class MirrorProvider(object):
 
 class RsyncProvider(MirrorProvider):
 
-    _default_options = ['-rtlvH', '--no-o', '--no-g', '--stats',
+    _default_options = ['-aHvh', '--no-o', '--no-g', '--stats',
                         '--exclude', '.~tmp~/',
                         '--delete', '--delete-after', '--delay-updates',
                         '--safe-links', '--timeout=120', '--contimeout=120']
